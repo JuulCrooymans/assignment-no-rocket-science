@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .message {
+            position: absolute;
+            top: 550px;
+            left: 250px;
+            font-size: 3rem;
+            transform: translateX(-50%);
+            color: #fff;
+        }
+
+        .fire {
+            animation: candleLight .1s infinite;
+        }
+
+        .fireInside {
+            animation: candleLightInside .1s infinite;
+        }
+
+        @keyframes candleLight {
+            0% {
+                ry: 80;
+                cy: 150;
+            }
+
+            50% {
+                ry: 100;
+                cy: 130;
+            }
+
+            100% {
+                ry: 80;
+                cy: 150;
+            }
+        }
+
+        @keyframes candleLightInside {
+            0% {
+                ry: 60;
+                cy: 150;
+            }
+
+            50% {
+                ry: 80;
+                cy: 130;
+            }
+
+            100% {
+                ry: 60;
+                cy: 150;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <svg viewbox="0 0 500 500" width="500" height="800">
+        <!-- cake -->
+        <ellipse cx="250" cy="600" rx="250" ry="50" style="fill:rgb(200,0,200);" />
+        <rect x="0" y="300" width="500" height="300" style="fill:rgb(200,0,200);" />
+        <ellipse cx="250" cy="300" rx="250" ry="50" style="fill:rgb(255,0,255);" />
+
+        <rect x="230" y="200" width="40" height="100" style="fill:rgb(220,220,220);" />
+        <ellipse class="fire" cx="250" cy="150" rx="50" ry="80" style="fill:rgb(255,200,0);" />
+        <ellipse class="fireInside" cx="250" cy="150" rx="30" ry="60" style="fill:rgb(255,100,0);" />
+
+    </svg>
+    <p class="message">Proficiat!!!</p>
+</body>
+
+</html>
